@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- primary colors -->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimaryLighter">#536DFE</color>
+
+    <!-- secondary colors -->
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccentDark">#F50057</color>
+    <color name="colorAccentLighter">#FF80AB</color>
+
+    <!-- text colors -->
+    <color name="textColorPrimary">#333333</color>
+    <color name="textColorSecondary">#5C5C5C</color>
+    <color name="textColorLighter">#7C7C7C</color>
+
+
+    <color name="black">#333333</color>
+    <color name="gray">#A7A6A6</color>
+    <color name="white">#FFFFFF</color>
+    <color name="pink">#FF80AB</color>
+    <color name="blue">#3F51B5</color>
+    <color name="green">#388E3C</color>
+    <color name="yellow">#FFEB3B</color>
+    <color name="transparent">#0000</color>
+
+
+    <color name="backgroundColor">#F5F5F5</color>
+
+    <color name="dividerColor">#757575</color>
+
+    <color name="textColorHint">#5FFF</color>
+
+    <color name="strokeColor">#757575</color>
+
+</resources>

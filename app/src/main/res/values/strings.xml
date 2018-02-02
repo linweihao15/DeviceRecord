@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">DeviceRecord</string>
+
+    //Action
+    <string name="search">Search</string>
+    <string name="more">More</string>
+    <string name="add">Add</string>
+    <string name="info">Info</string>
+    <string name="detail">Detail</string>
+    <string name="edit">Edit</string>
+    <string name="filter">Filter</string>
+    <string name="save">Save</string>
+    <string name="action_import">Import</string>
+    <string name="action_export">Export</string>
+
+    //Message
+    <string name="no_result">No result</string>
+    <string name="input_tips">Please input</string>
+
+    //Info
+    <string name="owner">Owner</string>
+    <string name="recordId">ID</string>
+    <string name="inventoryNumber">Inventory Number</string>
+    <string name="model">Model</string>
+    <string name="serialNumber">Serial Number</string>
+    <string name="imei">IMEI</string>
+    <string name="brand">Brand</string>
+    <string name="description">Description</string>
+    <string name="password">Password</string>
+    <string name="team">Owner Team</string>
+    <string name="location">Location</string>
+    <string name="buyer">Buyer</string>
+    <string name="adminRecord">Admin Record</string>
+    <string name="remark">Remark</string>
+    <string name="time">Time</string>
+    <string name="history">History</string>
+
+    //Dialog
+    <string name="message_save_change">Do you want to save changes ?</string>
+    <string name="message_export_change">Do you want to export changes ?</string>
+
+    <string name="button_yes">Yes</string>
+    <string name="button_no">No</string>
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Cancel</string>
+
+    <string name="others">Others</string>
+
+
+</resources>

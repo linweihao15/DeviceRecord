@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/searchView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@null"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:theme="@style/SearchViewStyle" />
+
+    <ImageView
+        android:id="@+id/searchButton"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/actionBarItemBackground"
+        android:contentDescription="@string/search"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_search"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+</LinearLayout>

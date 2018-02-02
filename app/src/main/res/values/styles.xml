@@ -1,0 +1,110 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <!-- Toolbar theme -->
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:background">@color/colorPrimary</item>
+        <!-- toolbar title color -->
+        <!--<item name="android:textColorPrimary">@color/white</item>-->
+        <!-- toolbar subTitle color -->
+        <!--<item name="subtitleTextColor">@color/white</item>-->
+        <!-- toolbar icon color -->
+        <!--<item name="colorControlNormal">@color/white</item>-->
+    </style>
+
+    <!-- Menu popup theme -->
+    <style name="MenuPopupTheme" parent="ThemeOverlay.AppCompat.Light">
+        <!-- menu background color -->
+        <!--<item name="android:background">@color/colorPrimaryLighter</item>-->
+        <!-- menu text color -->
+        <!--<item name="android:textColor">@color/white</item>-->
+        <!-- menu popup location -->
+        <item name="overlapAnchor">false</item>
+    </style>
+
+    <!-- Menu popup animation -->
+    <style name="MenuFadeAnimation">
+        <item name="android:windowEnterAnimation">@anim/menu_fade_in</item>
+        <item name="android:windowExitAnimation">@anim/menu_fade_out</item>
+    </style>
+
+    <!-- Search View Style-->
+    <style name="SearchViewStyle" parent="Theme.AppCompat.Light">
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:hint">@string/search</item>
+        <item name="android:textColorHint">@color/textColorHint</item>
+        <!--<item name="android:drawableStart">@drawable/ic_search</item>-->
+        <item name="colorControlNormal">@color/textColorHint</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+    </style>
+
+    <!-- Dialog Style -->
+    <style name="BaseDialog" parent="ThemeOverlay.AppCompat.Dialog">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <!--<item name="android:windowContentOverlay">@null</item>-->
+        <!--<item name="android:windowFrame">@null</item>-->
+        <!--<item name="android:windowIsTranslucent">false</item>-->
+        <!--<item name="android:windowIsFloating">true</item>-->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="BaseFullscreenDialog" parent="android:Theme.Translucent.NoTitleBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
+    <!-- Detail Style -->
+    <style name="DetailLayout">
+        <item name="android:gravity">bottom</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+    </style>
+
+    <style name="DetailTitle">
+        <item name="android:textSize">13sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/textColorLighter</item>
+    </style>
+
+    <style name="DetailInfo">
+        <item name="android:background">@null</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textColor">@color/textColorSecondary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:layout_marginEnd">0dp</item>
+        <item name="android:paddingStart">5dp</item>
+        <item name="android:paddingEnd">5dp</item>
+        <item name="android:enabled">false</item>
+    </style>
+
+    <style name="DetailInfo.Set">
+        <item name="android:drawableEnd">@drawable/ic_next</item>
+        <item name="android:enabled">true</item>
+    </style>
+
+    <style name="DetailDescription">
+        <item name="android:background">@null</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/textColorSecondary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:layout_marginEnd">15dp</item>
+        <item name="android:enabled">false</item>
+    </style>
+
+</resources>

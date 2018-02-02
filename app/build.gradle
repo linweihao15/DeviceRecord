@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "me.jack.devicerecord"
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "com.android.support:appcompat-v7:$support_version"
+    implementation "com.android.support:recyclerview-v7:$support_version"
+    implementation "org.jetbrains.anko:anko-common:$anko_version"
+    implementation "org.jetbrains.anko:anko-coroutines:$anko_version"
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    //Json Libraries
+    implementation 'com.google.code.gson:gson:2.8.2'
+    //Tools Util
+    implementation 'org.apache.commons:commons-lang3:3.7'
+    //Excel Libraries
+    implementation 'org.apache.poi:poi:3.17'
+    implementation 'org.codehaus.woodstox:wstx-asl:3.2.9'
+    implementation 'org.apache.poi:poi-ooxml:3.17'
+    implementation 'javax.xml.stream:stax-api:1.0-2'
+    //Animation
+    implementation 'com.daimajia.easing:library:2.0@aar'
+    implementation 'com.daimajia.androidanimations:library:2.3@aar'
+    //kotlin library
+    implementation 'me.jack:kotlin-library:1.1.0@aar'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+}
+
+kotlin {
+    experimental {
+        coroutines "enable"
+    }
+}
