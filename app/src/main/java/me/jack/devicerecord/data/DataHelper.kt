@@ -41,6 +41,25 @@ class DataHelper(private val record: DeviceRecord) {
         return false
     }
 
+    fun sumOfBrand(): Map<String, Int> {
+        val map = HashMap<String, Int>()
+        record.list.forEach {
+            val value = map[it.brand] ?: 0
+            map.put(it.brand, value + 1)
+        }
+        return map
+    }
+
+    fun sumOfmodelByBrand(brand: String): Map<String, Int> {
+        val map = HashMap<String, Int>()
+        record.list.filter { it.brand == brand }
+                .forEach {
+                    val value = map[it.model] ?: 0
+                    map.put(it.model, value + 1)
+                }
+        return map
+    }
+
     private fun isNotExist(device: Device): Boolean {
         return record.list.none {
             (device.recordId.isNotNA() && it.recordId == device.recordId) ||

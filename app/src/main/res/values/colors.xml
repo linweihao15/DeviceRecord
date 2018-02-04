@@ -15,14 +15,7 @@
     <color name="textColorSecondary">#5C5C5C</color>
     <color name="textColorLighter">#7C7C7C</color>
 
-
-    <color name="black">#333333</color>
-    <color name="gray">#A7A6A6</color>
-    <color name="white">#FFFFFF</color>
-    <color name="pink">#FF80AB</color>
-    <color name="blue">#3F51B5</color>
-    <color name="green">#388E3C</color>
-    <color name="yellow">#FFEB3B</color>
+    <color name="white">#FFF</color>
     <color name="transparent">#0000</color>
 
 
@@ -33,5 +26,26 @@
     <color name="textColorHint">#5FFF</color>
 
     <color name="strokeColor">#757575</color>
+
+    <!-- Colorful Colors -->
+    <color name="Red">#EF5350</color>
+    <color name="Pink">#EC407A</color>
+    <color name="Purple">#AB47BC</color>
+    <color name="DeepPurple">#7E57C2</color>
+    <color name="Indigo">#5C6BC0</color>
+    <color name="Blue">#42A5F5</color>
+    <color name="LightBlue">#29B6F6</color>
+    <color name="Cyan">#26C6DA</color>
+    <color name="Teal">#26A69A</color>
+    <color name="Green">#66BB6A</color>
+    <color name="LightGreen">#9CCC65</color>
+    <color name="Lime">#D4E157</color>
+    <color name="Yellow">#FFEE58</color>
+    <color name="Amber">#FFCA28</color>
+    <color name="Orange">#FFA726</color>
+    <color name="DeepOrange">#FF7043</color>
+    <color name="Brown">#8D6E63</color>
+    <color name="Grey">#BDBDBD</color>
+    <color name="BlueGrey">#78909C</color>
 
 </resources>

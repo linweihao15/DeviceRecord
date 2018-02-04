@@ -45,6 +45,8 @@ dependencies {
     implementation 'com.daimajia.androidanimations:library:2.3@aar'
     //kotlin library
     implementation 'me.jack:kotlin-library:1.1.0@aar'
+    //Chart
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
