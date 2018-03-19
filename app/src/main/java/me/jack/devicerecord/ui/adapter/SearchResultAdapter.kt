@@ -19,13 +19,13 @@ class SearchResultAdapter(private val deviceList: List<Device>,
                           private val itemClick: (Device) -> Unit)
     : RecyclerView.Adapter<SearchResultAdapter.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent?.ctx).inflate(R.layout.item_search_result, parent, false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val view = LayoutInflater.from(parent.ctx).inflate(R.layout.item_search_result, parent, false)
         return ViewHolder(view, itemClick)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
-        holder?.bindDevice(deviceList[position], keyword)
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.bindDevice(deviceList[position], keyword)
     }
 
     override fun getItemCount() = deviceList.size

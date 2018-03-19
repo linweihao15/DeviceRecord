@@ -12,13 +12,13 @@ import me.jack.kotlin.library.extension.ctx
 class MenuAdapter(private val menu: Menu, private val itemClick: (Int) -> Unit)
     : RecyclerView.Adapter<MenuAdapter.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent?.ctx).inflate(R.layout.item_menu, parent, false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val view = LayoutInflater.from(parent.ctx).inflate(R.layout.item_menu, parent, false)
         return ViewHolder(view, itemClick)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
-        holder?.parseMenuItem(menu.getItem(position))
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.parseMenuItem(menu.getItem(position))
     }
 
     override fun getItemCount() = menu.size()
