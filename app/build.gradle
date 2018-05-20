@@ -6,6 +6,8 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+
     defaultConfig {
         applicationId "me.jack.devicerecord"
         minSdkVersion 21
@@ -30,7 +32,7 @@ dependencies {
     implementation "com.android.support:recyclerview-v7:$support_version"
     implementation "org.jetbrains.anko:anko-common:$anko_version"
     implementation "org.jetbrains.anko:anko-coroutines:$anko_version"
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     //Json Libraries
     implementation 'com.google.code.gson:gson:2.8.2'
     //Tools Util
@@ -44,13 +46,14 @@ dependencies {
     implementation 'com.daimajia.easing:library:2.0@aar'
     implementation 'com.daimajia.androidanimations:library:2.3@aar'
     //kotlin library
-    implementation 'me.jack:kotlin-library:1.1.0@aar'
+    implementation 'me.jack:kotlin-library:1.2.1@aar'
     //Chart
     implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
 
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
 }
 
 kotlin {
