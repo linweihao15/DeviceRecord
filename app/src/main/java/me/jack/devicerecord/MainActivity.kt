@@ -6,7 +6,7 @@ import me.jack.devicerecord.extension.translucentStatus
 import me.jack.devicerecord.ui.fragment.BaseFragment
 import me.jack.devicerecord.ui.fragment.HomeFragment
 import me.jack.devicerecord.util.FragmentUtils
-import me.jack.devicerecord.util.PermissionUtils
+import me.jack.kotlin.library.util.PermissionHelper
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,8 +18,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-        if (requestCode == PermissionUtils.REQUEST_CODE) {
-            PermissionUtils.instance.handlePermissionsResult(permissions, grantResults)
+        if (requestCode == PermissionHelper.REQUEST_CODE) {
+            PermissionHelper.instance.handlePermissionsResult(permissions, grantResults)
         }
     }
 

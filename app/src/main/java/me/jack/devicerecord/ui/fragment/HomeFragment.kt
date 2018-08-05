@@ -31,7 +31,7 @@ import me.jack.devicerecord.ui.dialog.SearchDialog
 import me.jack.devicerecord.ui.dialog.SearchResultCallback
 import me.jack.devicerecord.util.FragmentUtils
 import me.jack.devicerecord.util.POIUtils
-import me.jack.devicerecord.util.PermissionUtils
+import me.jack.kotlin.library.util.PermissionHelper
 import me.jack.kotlin.library.util.ToolbarInterface
 import org.jetbrains.anko.coroutines.experimental.bg
 import org.jetbrains.anko.find
@@ -102,45 +102,27 @@ class HomeFragment : BaseFragment(), ToolbarInterface, SearchResultCallback {
 
     private fun start() {
         //Request permission
-        PermissionUtils.instance.requestPermissions(Manifest.permission.READ_EXTERNAL_STORAGE)
-                .onSuccess(object : PermissionUtils.SuccessCallback {
-                    override fun onSuccess(permissions: Array<out String>) {
-                        loadData()
-                    }
-                })
-                .onFailure(object : PermissionUtils.FailureCallback {
-                    override fun onFailure(permissions: Array<out String>, result: IntArray) {
-                        toast("failure")
-                    }
-                })
+        PermissionHelper.instance.requestPermissions(Manifest.permission.READ_EXTERNAL_STORAGE)
+                .onSuccess {
+                    loadData()
+                }
+                .onFailure { _, _ ->
+                    toast("failure")
+                }
                 .run(activity)
     }
 
     private fun loadData() {
-//        mLoadingDialog.show(activity.fragmentManager, LoadingDialog::class.java.name)
-//        doAsync {
-//            val record = POIUtils.instance.record()
-//            runOnUiThread {
-//                if (record.title.isNotBlank()) {
-//                    //show data
-//                    toast(record.title)
-//                } else {
-//                    //show error message and file selector
-//                    toast("No exist excel")
-//                }
-//                mLoadingDialog.dismiss()
-//            }
-//        }
         async(UI) {
             mLoadingDialog.show(activity.fragmentManager, LoadingDialog::class.java.name)
             val result = bg { POIUtils.instance.record() }
             val record = result.await()
-            if (record.title.isNotBlank()) {
+            if (record != POIUtils.EMPTY_RECORD) {
                 //show data
                 showData(record)
             } else {
                 //show error message and file selector
-                toast("No exist excel")
+                toast("No existing excel")
             }
             mLoadingDialog.dismiss()
         }
@@ -242,7 +224,7 @@ class HomeFragment : BaseFragment(), ToolbarInterface, SearchResultCallback {
         pieChart.setOnChartValueSelectedListener(object : OnChartValueSelectedListener {
             override fun onValueSelected(e: Entry?, h: Highlight?) {
                 e?.let {
-//                    Log.d(javaClass.simpleName, "Entry: value=${e.y}, data=${e.data}")
+                    //                    Log.d(javaClass.simpleName, "Entry: value=${e.y}, data=${e.data}")
                     val helper = DataHelper(POIUtils.instance.record())
                     val models = helper.sumOfmodelByBrand(e.data.toString())
                     showModelBarChart(models.toSortedMap())
